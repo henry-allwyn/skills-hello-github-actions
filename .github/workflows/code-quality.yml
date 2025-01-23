@@ -8,10 +8,8 @@
 # read our documentation at https://github.com/codescan-io/codescan-scanner-action
 name: CodeScan
 
-on:
-  pull_request:
-    types: [opened]
-    
+on: pull_request
+
 permissions:
   contents: read
   
