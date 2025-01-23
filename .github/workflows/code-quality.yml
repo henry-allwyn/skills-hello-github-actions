@@ -8,10 +8,8 @@
 # read our documentation at https://github.com/codescan-io/codescan-scanner-action
 name: CodeScan
 
-on:
-  pull_request:
-    types: [opened]
-    
+on: pull_request
+
 permissions:
   contents: read
   
@@ -23,7 +21,10 @@ jobs:
           actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
         runs-on: self-hosted
         steps:
-            -   name: Upload SARIF file
-                uses: github/codeql-action/upload-sarif@v3
-                with:
-                    sarif_file: codescan.sarif
+            - name: Print current working directory
+              run: pwd
+              
+            - name: Upload SARIF file
+              uses: github/codeql-action/upload-sarif@v3
+              with:
+                sarif_file: /home/henry/runners/github/codescan.sarif
