@@ -8,8 +8,10 @@
 # read our documentation at https://github.com/codescan-io/codescan-scanner-action
 name: Cubyts Code Quality Scan
 
-on: pull_request
-
+on: 
+  pull_request:
+    branches: [ "main" ]
+    
 permissions:
   contents: read
   
