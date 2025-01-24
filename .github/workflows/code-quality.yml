@@ -6,10 +6,14 @@
 # This workflow requires that you have an existing account with codescan.io
 # For more information about configuring your workflow,
 # read our documentation at https://github.com/codescan-io/codescan-scanner-action
-name: CodeScan
 
-on: pull_request
+name: Cubyts Code Quality Scan
 
+on: 
+  pull_request:
+    types: ["opened", "synchronize", "reopened", "closed"]
+    branches: [ "main" ]
+    
 permissions:
   contents: read
   
