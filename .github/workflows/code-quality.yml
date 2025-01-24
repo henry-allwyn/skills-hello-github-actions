@@ -10,6 +10,7 @@ name: Cubyts Code Quality Scan
 
 on: 
   pull_request:
+    types: ["opened", "synchronize", "reopened", "closed"]
     branches: [ "main" ]
     
 permissions:
